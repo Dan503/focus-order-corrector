@@ -1,0 +1,102 @@
+{
+  "name": "focus-order-fix",
+  "version": "0.0.0",
+  "description": "Fixes the focus order of interactive elements that have had their visual order altered through css-grid and flexbox",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dan503/focus-order-fix.git"
+  },
+  "keywords": [
+    "focus",
+    "order",
+    "css-grid",
+    "flexbox"
+  ],
+  "author": "Daniel Tonon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dan503/focus-order-fix/issues"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "homepage": "https://github.com/Dan503/focus-order-fix#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browser-sync": "^2.18.13",
+    "browserify": "^16.2.0",
+    "browserify-shim": "^3.8.14",
+    "chalk": "^2.4.0",
+    "count-keys": "^1.1.2",
+    "del": "^3.0.0",
+    "envify": "^4.1.0",
+    "foldero": "^0.1.1",
+    "glob": "^7.1.2",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-bump": "^2.8.0",
+    "gulp-changed": "^3.1.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-data": "^1.2.1",
+    "gulp-eslint": "^4.0.0",
+    "gulp-git": "^2.4.2",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-newer": "^1.3.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-pug": "4.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-svg-symbols": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-wait": "0.0.2",
+    "jquery": "^3.2.1",
+    "jstransformer-marked": "^1.0.2",
+    "minimist": "^1.2.0",
+    "node-notifier": "^5.1.2",
+    "normalize.css": "^7.0.0",
+    "obj-append-strings": "^1.1.2",
+    "postcss-pxtorem": "^4.0.1",
+    "pxtorem": "^1.0.0",
+    "require-reload": "^0.2.2",
+    "rimraf": "^2.6.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
+  },
+  "//": "CUSTOM CONFIGURATION",
+  "config": {
+    "//": "Entry files",
+    "host": "127.0.0.1",
+    "port": "3000",
+    "baseUrl": "./",
+    "directories": {
+      "source": "src",
+      "destination": "docs",
+      "temporary": "tmp",
+      "//": "Directories relative to `source` directory",
+      "modules": "_modules",
+      "layouts": "_layouts",
+      "images": "_images",
+      "styles": "_styles",
+      "scripts": "_scripts",
+      "assets": "assets",
+      "data": "_data"
+    },
+    "entries": {
+      "js": "main.js",
+      "css": "main**.{sass,scss}"
+    }
+  }
+}
