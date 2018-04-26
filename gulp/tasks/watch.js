@@ -26,7 +26,7 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
     gulp.watch([
       join(dirs.source, '**/*.js'),
     ])
-    .on('change', gulp.series('browserify'));
+    .on('change', gulp.series('js'));
 
     // Jade Templates
     gulp.watch([
