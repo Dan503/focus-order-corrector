@@ -26,5 +26,11 @@ let browserSync = browserSyncLib.create();
 //Determines if browser should watch JS files for changes using watchify
 //(I have to set it as an object in order to overide it)
 let jsWatch = {isEnabled: false, calledFromWatch: false };
+jsWatch.enable = done => {
+	jsWatch.isEnabled = true;
+	done();
+};
 
-export { gulp, plugins, args, config, pjson, dirs, entries, taskTarget, browserSync, notification_icon_location, jsWatch }
+const join = (...arr) => arr.join('/');
+
+export { gulp, plugins, args, config, pjson, dirs, entries, taskTarget, browserSync, notification_icon_location, jsWatch, join }

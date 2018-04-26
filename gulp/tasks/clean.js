@@ -2,6 +2,7 @@
 
 import path from 'path';
 import del from 'del';
+import { join } from '../config/shared-vars';
 
 export default function(gulp, plugins, args, config, taskTarget, browserSync) {
   let dirs = config.directories;
@@ -9,7 +10,7 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
   // Clean
   gulp.task('clean', (done)=>{
 		del.sync([
-	    path.join(dirs.temporary),
+	    join(dirs.temporary),
 	  ]);
 	  done();
   });

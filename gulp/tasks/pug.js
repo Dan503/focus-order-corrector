@@ -7,12 +7,12 @@ import pug from 'pug';
 import yaml from 'js-yaml';
 import notifier from 'node-notifier';
 import c from 'chalk';
-import { notification_icon_location, pjson } from '../config/shared-vars';
+import { notification_icon_location, pjson, join } from '../config/shared-vars';
 
 export default function(gulp, plugins, args, config, taskTarget, browserSync) {
   let dirs = config.directories;
-  let dest = path.join(taskTarget);
-  let dataPath = path.join(dirs.source, dirs.data);
+  let dest = join(taskTarget);
+  let dataPath = join(dirs.source, dirs.data);
 
   // Jade template compile
   gulp.task('pug:compile', (done) => {
@@ -57,8 +57,8 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
     let itteration = 0;
 
     return gulp.src([
-      path.join(dirs.source, '**/*.pug'),
-      '!' + path.join(dirs.source, '{**/\_*,**/\_*/**}')
+      join(dirs.source, '**/*.pug'),
+      '!' + join(dirs.source, '{**/\_*,**/\_*/**}')
     ])
     .pipe(plugins.changed(dest))
     .pipe(plugins.plumber((error)=>{

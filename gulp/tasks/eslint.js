@@ -4,6 +4,7 @@
 
 import path from 'path';
 import gulpif from 'gulp-if';
+import { join } from '../config/shared-vars';
 
 export default function(gulp, plugins, args, config, taskTarget, browserSync) {
   let dirs = config.directories;
@@ -11,10 +12,10 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
   // ESLint
   gulp.task('eslint', () => {
     return gulp.src([
-      path.join('gulpfile.js'),
-      path.join(dirs.source, '**/*.js'),
+      join('gulpfile.js'),
+      join(dirs.source, '**/*.js'),
       // Ignore all vendor folder files
-      '!' + path.join('**/vendor/**', '*')
+      '!' + join('**/vendor/**', '*')
     ])
     .pipe(browserSync.reload({stream: true, once: true}))
     .pipe(plugins.eslint({

@@ -61,6 +61,7 @@
     "gulp-svg-symbols": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-wait": "0.0.2",
+    "gulp-watchify-browserify": "^0.2.2",
     "jquery": "^3.2.1",
     "jstransformer-marked": "^1.0.2",
     "minimist": "^1.2.0",
@@ -73,7 +74,7 @@
     "rimraf": "^2.6.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.9.0"
+    "watchify": "^3.11.0"
   },
   "//": "CUSTOM CONFIGURATION",
   "config": {
